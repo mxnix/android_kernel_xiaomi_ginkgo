@@ -16,7 +16,7 @@ jobs:
       uses: dabao1955/kernel_build_action@main
       with:
           kernel-url: https://github.com/mxnix/android_kernel_xiaomi_ginkgo
-          kernel-branch: 13
+          kernel-branch: 12
           config: ginkgo-perf_defconfig
           arch: arm64
           aosp-gcc: true
