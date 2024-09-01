@@ -1,5 +1,72 @@
-- name: Android Kernel Build Action
-
-
-              
+            - name: Android Kernel Build Action
+  # You may pin to the exact commit or the version.
+  # uses: dabao1955/kernel_build_action@845dc81114d3f5dc0f34adde2425c31f173ce0b8
   uses: dabao1955/kernel_build_action@v1.6.3
+  with:
+    # Kernel Source Url
+    kernel-url: 
+    # 
+    depth: # optional, default is 1
+    # Kernel Vendor Source Url
+    vendor-url: # optional
+    # 
+    kernel-dir: # optional, default is kernel
+    # 
+    vendor-dir: # optional, default is vendor
+    # Branch name
+    kernel-branch: # optional, default is main
+    # 
+    vendor-branch: # optional, default is main
+    # configuration for building android kernel
+    config: # default is defconfig
+    # 
+    arch: # default is arm64
+    # Android version.
+    android-version: # default is 12
+    # KernelSU function support
+    ksu: # optional
+    # KernelSU default branch
+    ksu-version: # optional, default is main
+    # Build KernelSU as a loadable kernel module
+    ksu-lkm: # optional
+    # Disable LTO configs for configs.
+    disable-lto: # optional
+    # Enable lxc and docker configs for configs.
+    lxc: # optional
+    # Apply lxc patch aviod not booting
+    lxc-patch: # optional
+    # Enable Kali nethunter
+    nethunter: # optional
+    # patch config
+    nethunter-patch: # optional
+    # Enable KVM for configs.
+    kvm: # optional
+    # Enable Ccache for compiling kernel
+    ccache: # optional
+    # Use gcc from aosp project.
+    aosp-gcc: # default is true
+    # Use clang from aosp project.
+    aosp-clang: # optional
+    # 
+    aosp-clang-version: # optional, default is r383902
+    # 
+    other-clang-url: # optional, default is 
+    # 
+    other-clang-branch: # optional, default is main
+    # Use Android NDK to build kernrl (Experimental features)
+    android-ndk: # optional
+    # Please press nember instead of r(e.g. : 26).
+    android-ndk-version: # optional, default is r21b
+    # Package kernel use anykernel3.
+    anykernel3: # optional
+    # 3rdparty anykernrl3 url path
+    anykernel3-url: # optional, default is 
+    # boot.img path
+    bootimg-url: # optional, default is 
+    # After the kernel compilation is completed, it will be automatically published to the releases page
+    release: # optional
+    # PAT with repository scope (https://github.com/settings/tokens)
+    access-token: # optional
+    # Extra options of building kernel.
+    extra-cmd: # optional, default is 
+          
